@@ -1,7 +1,28 @@
 {
-    "sentences": [
+    "index": [
         {
             "sentence" : "She kept it secret that she left an important document on the train.",
+            "translation-jpn":"彼女は電車に大事な書類を忘れたことを秘密にした。",
+            "grammercategory": ["5th","past-tense", "that"]
+        },
+        {
+            "sentence" : "She kept it secret that she left an important document on the train.",
+            "translation-jpn":"彼女は電車に大事な書類を忘れたことを秘密にした。",
+            "grammercategory": ["5th","past-tense", "that"]
+        },
+        {
+            "sentence" : "She kept it secret that she left an important document on the train.",
+            "translation-jpn":"彼女は電車に大事な書類を忘れたことを秘密にした。",
+            "grammercategory": ["5th","past-tense", "that"]
+        },
+        {
+            "sentence" : "She kept it secret that she left an important document on the train.",
+            "translation-jpn":"彼女は電車に大事な書類を忘れたことを秘密にした。",
+            "grammercategory": ["5th","past-tense", "that"]
+        },
+        {
+            "sentence" : "She kept it secret that she left an important document on the train.",
+            "translation-jpn":"彼女は電車に大事な書類を忘れたことを秘密にした。",
             "grammercategory": ["5th","past-tense", "that"]
         }
     ]

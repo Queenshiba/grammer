@@ -5,9 +5,20 @@ fetch("./data.json")
         return resp.json();
     })
     .then(function (data) {
-        const sampleSentences = data.sentences;
-        let ptag = document.getElementsByTagName('p')
-        ptag = sampleSentences
-        console.log(sampleSentences)
+        const index = data.index;
+
+        const result = document.getElementById('result')
+        
+index.forEach(element => {
+
+    let createPtag = document.createElement('p')
+    let samplesentence = element.sentence
+    let textnode = document.createTextNode(samplesentence)
+    console.log(samplesentence)
+    createPtag.appendChild(textnode)
+    result.appendChild(createPtag)
+});
+      
+        console.log(index)
     });
 
