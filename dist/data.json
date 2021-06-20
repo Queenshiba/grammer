@@ -3,27 +3,37 @@
         {
             "sentence" : "She kept it secret that she left an important document on the train.",
             "translation-jpn":"彼女は電車に大事な書類を忘れたことを秘密にした。",
-            "grammercategory": ["5th","past-tense", "that"]
+            "grammercategory": 
+                {
+                    "pattern":["5th","SVOC"],
+                    "type":"affirmative",
+                    "tense": "past",
+                    "subject": "the third person"
+
+                }
         },
         {
-            "sentence" : "She kept it secret that she left an important document on the train.",
+            "sentence" : "Haven't I made it clear that we are just friends? ",
             "translation-jpn":"彼女は電車に大事な書類を忘れたことを秘密にした。",
             "grammercategory": ["5th","past-tense", "that"]
         },
         {
-            "sentence" : "She kept it secret that she left an important document on the train.",
+            "sentence" : "She is studying English for 3 months so that she can speak it when she travels foreign countries. ",
             "translation-jpn":"彼女は電車に大事な書類を忘れたことを秘密にした。",
             "grammercategory": ["5th","past-tense", "that"]
         },
         {
-            "sentence" : "She kept it secret that she left an important document on the train.",
+            "sentence" : "It was found out that my mother had a cancer. ",
             "translation-jpn":"彼女は電車に大事な書類を忘れたことを秘密にした。",
             "grammercategory": ["5th","past-tense", "that"]
         },
         {
-            "sentence" : "She kept it secret that she left an important document on the train.",
+            "sentence" : "It was yesterday that they found her. ",
             "translation-jpn":"彼女は電車に大事な書類を忘れたことを秘密にした。",
             "grammercategory": ["5th","past-tense", "that"]
         }
     ]
 }
+
+
+
