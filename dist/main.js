@@ -22,11 +22,13 @@ fetch("./data.json")
 
         searchInputBtn.addEventListener('click', () => filteringSentences())
         function filteringSentences() {
-            console.log(searchInput.value)
+            // console.log(searchInput.value)
             index.forEach(element => {
                 let samplesentence = element.sentence
-                if (samplesentence.includes(searchInput.value)) {
-                console.log(samplesentence)
+                let lowercasedSamplesentence = samplesentence.toLowerCase()
+
+                if (lowercasedSamplesentence.includes(searchInput.value)) {
+                console.log("yes")
                 } else {
                     console.log("no")
                 }
