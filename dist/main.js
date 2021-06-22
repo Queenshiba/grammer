@@ -8,6 +8,16 @@ fetch("./data.json")
         const index = data.index;
 
         const result = document.getElementById('result')
+        // createCheckboxLebel
+        index.forEach(element => {
+            let createPtag = document.createElement('p')
+            let grammercategory = element.grammercategory
+            let grammercategoryTextnode = document.createTextNode(grammercategory)
+            // console.log(samplesentence)
+            createPtag.appendChild(grammercategoryTextnode)
+            result.appendChild(createPtag)
+        });
+
 
         index.forEach(element => {
             let createPtag = document.createElement('p')
@@ -17,6 +27,7 @@ fetch("./data.json")
             createPtag.appendChild(textnode)
             result.appendChild(createPtag)
         });
+
 
         console.log(index)
 
@@ -28,7 +39,7 @@ fetch("./data.json")
                 let lowercasedSamplesentence = samplesentence.toLowerCase()
 
                 if (lowercasedSamplesentence.includes(searchInput.value)) {
-                console.log("yes")
+                    console.log("yes")
                 } else {
                     console.log("no")
                 }
