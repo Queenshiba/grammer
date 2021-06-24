@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <h1>grammer</h1>
-<div class="container">
-    <div class="filter-wrap">
-        <input type="text" id="search-input"><button id="search-input-btn">search</button>
-        <div class="checkbox-wrap">
-            <p class="group">tense</p>
-            <input type="checkbox" name="test" id="">
-            <label for="test">test</label>
+    <div class="container">
+        <div class="filter-wrap">
+            <input type="text" id="search-input"><button id="search-input-btn">search</button>
+            <div class="checkbox-wrap" id="group-type">
+                <p class="group">type</p>
+            </div>
+            <div class="checkbox-wrap" id="group-tense">
+                <p class="group">tense</p>
+
+            </div>
+
+            <div class="checkbox-wrap">
+                <input type="checkbox" name="test" id="">
+                <label for="test">test</label>
+            </div>
         </div>
-        <div class="checkbox-wrap">
-            <input type="checkbox" name="test" id="">
-            <label for="test">test</label>
-        </div>
-        <div class="checkbox-wrap">
-            <input type="checkbox" name="test" id="">
-            <label for="test">test</label>
-        </div>
+        <div id="result"></div>
     </div>
-    <div id="result"></div>
-</div>
     <script src="main.js"></script>
 </body>
+
 </html>
