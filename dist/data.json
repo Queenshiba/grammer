@@ -21,9 +21,9 @@
                     "5th",
                     "SVOC"
                 ],
-                "type": "affirmative",
+                "type": "interrogative",
                 "tense": "past",
-                "subject": "the third person"
+                "subject": "the first person"
             }
         },
         {
@@ -31,11 +31,11 @@
             "translation-jpn": "彼女は電車に大事な書類を忘れたことを秘密にした。",
             "grammercategory": {
                 "pattern": [
-                    "5th",
-                    "SVOC"
+                    "3th",
+                    "SVO"
                 ],
                 "type": "affirmative",
-                "tense": "past",
+                "tense": "Present continuous",
                 "subject": "the third person"
             }
         },
@@ -44,8 +44,8 @@
             "translation-jpn": "彼女は電車に大事な書類を忘れたことを秘密にした。",
             "grammercategory": {
                 "pattern": [
-                    "5th",
-                    "SVOC"
+                    "3th",
+                    "SVO"
                 ],
                 "type": "affirmative",
                 "tense": "past",
@@ -57,8 +57,8 @@
             "translation-jpn": "彼女は電車に大事な書類を忘れたことを秘密にした。",
             "grammercategory": {
                 "pattern": [
-                    "5th",
-                    "SVOC"
+                    "3th",
+                    "SVO"
                 ],
                 "type": "affirmative",
                 "tense": "past",
