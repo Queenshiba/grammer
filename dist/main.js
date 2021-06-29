@@ -55,20 +55,22 @@ fetch("./data.json")
 
 let searchInput = document.getElementById("search-input")
 let searchInputBtn = document.getElementById("search-input-btn")
+let filteringCheckboxBtn = document.getElementById("filteringCheckboxBtn")
 
 //get lebels of checkbox
-searchInputBtn.addEventListener('click', () => filteringCheckboxLebels(e))
-function filteringCheckboxLabels(e) {
-    let labels = document.getElementsByTagName("label")
-    let text = []
-    console.log(labels.length)
-    for (let i = 0; i < labels.length; i++) {
-let label = labels[i];
-if(label.getAttribute("for") == e) {
+filteringCheckboxBtn.addEventListener('click', () => filteringCheckboxLabels())
+function filteringCheckboxLabels() {
+    let checkboxes = document.getElementsByClassName("checkbox")
+    // let checkboxesValues = checkboxes[0].value
 
-}
+    
+    // for (let i = 0; i < checkboxes.length; i++) {
+    //     let checkboxValue = checkboxes[i].value;
+    //     if (checkboxes[i].checked) {
+    //         console.log(checkboxes[i])
+    //     }
 
-    }
+    // }
 }
 
 
@@ -78,7 +80,8 @@ let checkboxWrapType = document.getElementById('group-type')
 typesofsentences.forEach(element => {
     let createCheckbox = document.createElement('input')
     createCheckbox.setAttribute("type", "checkbox")
-    createCheckbox.setAttribute("for", element)
+    createCheckbox.setAttribute("class", "checkbox")
+    createCheckbox.setAttribute("value", element)
     let createCheckboxLebel = document.createElement('label')
     let typesofsentencesTextnode = document.createTextNode(element)
     createCheckboxLebel.appendChild(typesofsentencesTextnode)
@@ -93,7 +96,7 @@ let checkboxWrapTense = document.getElementById('group-tense')
 typesoftenses.forEach(element => {
     let createCheckbox = document.createElement('input')
     createCheckbox.setAttribute("type", "checkbox")
-    createCheckbox.setAttribute("for", element)
+    createCheckbox.setAttribute("value", element)
     let createCheckboxLebel = document.createElement('label')
     let typesofsentencesTextnode = document.createTextNode(element)
     createCheckboxLebel.appendChild(typesofsentencesTextnode)
