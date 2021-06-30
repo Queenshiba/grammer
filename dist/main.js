@@ -61,16 +61,16 @@ let filteringCheckboxBtn = document.getElementById("filteringCheckboxBtn")
 filteringCheckboxBtn.addEventListener('click', () => filteringCheckboxLabels())
 function filteringCheckboxLabels() {
     let checkboxes = document.getElementsByClassName("checkbox")
-    // let checkboxesValues = checkboxes[0].value
+    for (let i = 0; i < checkboxes.length; i++) {
+        let checkboxValue = checkboxes[i].value;
+        if (checkboxes[i].value) {
+            let checkedCheckbox = checkboxes[i].value
+            
+            console.log(checkboxes[i].value)
 
-    
-    // for (let i = 0; i < checkboxes.length; i++) {
-    //     let checkboxValue = checkboxes[i].value;
-    //     if (checkboxes[i].checked) {
-    //         console.log(checkboxes[i])
-    //     }
+        }
+    }
 
-    // }
 }
 
 
