@@ -50,28 +50,34 @@ fetch("./data.json")
             });
 
         }
+
+
+        //get lebels of checkbox
+        filteringCheckboxBtn.addEventListener('click', () => filteringCheckboxLabels())
+        function filteringCheckboxLabels() {
+            let checkboxes = document.getElementsByClassName("checkbox")
+            for (let i = 0; i < checkboxes.length; i++) {
+
+                let checkedCheckbox = checkboxes[i].value
+                if (checkedCheckbox === index[0].grammercategory) {
+                    
+
+                    console.log("yes son")
+
+                }
+            }
+
+        }
+
     });
 
+// console.log(test)
 
 let searchInput = document.getElementById("search-input")
 let searchInputBtn = document.getElementById("search-input-btn")
 let filteringCheckboxBtn = document.getElementById("filteringCheckboxBtn")
 
-//get lebels of checkbox
-filteringCheckboxBtn.addEventListener('click', () => filteringCheckboxLabels())
-function filteringCheckboxLabels() {
-    let checkboxes = document.getElementsByClassName("checkbox")
-    for (let i = 0; i < checkboxes.length; i++) {
-        let checkboxValue = checkboxes[i].value;
-        if (checkboxes[i].value) {
-            let checkedCheckbox = checkboxes[i].value
-            
-            console.log(checkboxes[i].value)
 
-        }
-    }
-
-}
 
 
 // createCheckboxLebel
