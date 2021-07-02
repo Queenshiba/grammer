@@ -59,15 +59,25 @@ fetch("./data.json")
             for (let i = 0; i < checkboxes.length; i++) {
 
                 let checkedCheckbox = checkboxes[i].value
-                if (checkedCheckbox === index[0].grammercategory) {
-                    
+                index.forEach(element => {
+                    let grammercategoryObjValue = Object.values(element.grammercategory)
+                    let grammercategory = element.sentence
+                    console.log(grammercategory)
+                    grammercategoryObjValue.forEach(value => {
+                        if (checkedCheckbox === value) {
 
-                    console.log("yes son")
+                            console.log(grammercategory[0].sentence)
+                            
+                        } else {
+                            console.log("not working")
+                        }
+                    })
+                    }
 
-                }
+                )
             }
-
         }
+
 
     });
 
