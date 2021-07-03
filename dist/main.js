@@ -64,10 +64,9 @@ fetch("./data.json")
                     let grammercategory = element.sentence
                     console.log(grammercategory)
                     grammercategoryObjValue.forEach(value => {
-                        if (checkedCheckbox === value) {
+                        if (checkedCheckbox===value) {
 
-                            console.log(grammercategory[0].sentence)
-                            
+                            console.log(value)
                         } else {
                             console.log("not working")
                         }
