@@ -6,7 +6,7 @@
             "grammercategory": {
                 "pattern": "SVOC",
                 "type": "affirmative",
-                "tense": "past",
+                "tense": "past simple",
                 "subject": "the third person"
             }
         },
@@ -16,7 +16,7 @@
             "grammercategory": {
                 "pattern": "SVOC",
                 "type": "interrogative",
-                "tense": "past",
+                "tense": "Present perfect continuous",
                 "subject": "the first person"
             }
         },
@@ -26,7 +26,7 @@
             "grammercategory": {
                 "pattern": "SVO",
                 "type": "affirmative",
-                "tense": "Present continuous",
+                "tense": "present continuous",
                 "subject": "the third person"
             }
         },
@@ -36,7 +36,7 @@
             "grammercategory": {
                 "pattern": "SVO",
                 "type": "affirmative",
-                "tense": "past",
+                "tense": "past simple",
                 "subject": "the third person"
             }
         },
@@ -46,7 +46,7 @@
             "grammercategory": {
                 "pattern": "SVO",
                 "type": "affirmative",
-                "tense": "past",
+                "tense": "past simple",
                 "subject": "the third person"
             }
         }

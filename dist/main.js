@@ -52,29 +52,43 @@ fetch("./data.json")
         }
 
 
-        //get lebels of checkbox
-        filteringCheckboxBtn.addEventListener('click', () => filteringCheckboxLabels())
-        function filteringCheckboxLabels() {
-            let checkboxes = document.getElementsByClassName("checkbox")
-            for (let i = 0; i < checkboxes.length; i++) {
+        //get lebels of checked checkbox value
+        filteringCheckboxBtn.addEventListener('click', () => getCheckboxLabels())
+        function getCheckboxLabels() {
+            let checkedcheckboxes = document.querySelectorAll('input[type=checkbox]:checked')
 
-                let checkedCheckbox = checkboxes[i].value
+            let checkedCheckboxValuesArr = []
+            for (let i = 0; i < checkedcheckboxes.length; i++) {
+                let checkedCheckboxValue = checkedcheckboxes[i].value
+                // console.log(checkedCheckboxValue.length)
+                checkedCheckboxValuesArr.push(checkedCheckboxValue)
+                // console.log(checkedCheckboxValuesArr)
+                test(checkedCheckboxValuesArr)
+            }
+
+            function test(checkedCheckboxValuesArr) {
+                let results = []
                 index.forEach(element => {
-                    let grammercategoryObjValue = Object.values(element.grammercategory)
-                    let grammercategory = element.sentence
-                    console.log(grammercategory)
-                    grammercategoryObjValue.forEach(value => {
-                        if (checkedCheckbox===value) {
+                    let grammercategoryValues = Object.values(element.grammercategory)
 
-                            console.log(value)
-                        } else {
-                            console.log("not working")
+                    for (let k = 0; k < checkedCheckboxValuesArr.length; k++) {
+                        if (grammercategoryValues.includes(checkedCheckboxValuesArr[k])) {
+                            results.push(element.sentence)
                         }
-                    })
+
+
                     }
 
-                )
+                })
+                console.log(results)
+                // console.log(grammercategoryValues)
+
+
             }
+
+
+
+
         }
 
 
@@ -111,6 +125,7 @@ let checkboxWrapTense = document.getElementById('group-tense')
 typesoftenses.forEach(element => {
     let createCheckbox = document.createElement('input')
     createCheckbox.setAttribute("type", "checkbox")
+    createCheckbox.setAttribute("class", "checkbox")
     createCheckbox.setAttribute("value", element)
     let createCheckboxLebel = document.createElement('label')
     let typesofsentencesTextnode = document.createTextNode(element)
