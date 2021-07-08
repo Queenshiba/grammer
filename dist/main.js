@@ -74,8 +74,10 @@ fetch("./data.json")
                     for (let k = 0; k < checkedCheckboxValuesArr.length; k++) {
                         if (grammercategoryValues.includes(checkedCheckboxValuesArr[k])) {
                             results.push(element.sentence)
-                        }
 
+                        }
+                        
+                        break
 
                     }
 
