@@ -76,7 +76,7 @@ fetch("./data.json")
                             results.push(element.sentence)
 
                         }
-                        
+
                         break
 
                     }
@@ -136,9 +136,26 @@ typesoftenses.forEach(element => {
     checkboxWrapTense.appendChild(createCheckboxLebel)
 })
 
-const infinitive = ["noun", "adjective", "adverb"]
-const gerund = ["none"]
+
+const typesofcomparative = ["原級比較", "比較級", "最上級"]
 const comparativeJp = ["原級比較", "比較級", "最上級"]
+
+let checkboxWrapComparative = document.getElementById('group-comparative')
+typesofcomparative.forEach(element => {
+    let createCheckboxForComparative = document.createElement('input')
+    createCheckboxForComparative.setAttribute("type", "checkbox")
+    createCheckboxForComparative.setAttribute("class", "checkbox")
+    createCheckboxForComparative.setAttribute("value", element)
+    let createCheckboxLebelForComparative = document.createElement('label')
+    let typesofinfinitiveTextnode = document.createTextNode(element)
+    createCheckboxLebelForComparative.appendChild(typesofinfinitiveTextnode)
+    checkboxWrapComparative.appendChild(createCheckboxForComparative)
+    checkboxWrapComparative.appendChild(createCheckboxLebelForComparative)
+})
+
+
+const typesofinfinitive = ["noun", "adjective", "adverb"]
+const gerund = ["none"]
 // an affirmative sentence
 // a negative sentence
 // an interrogative sentence
