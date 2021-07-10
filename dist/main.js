@@ -67,7 +67,7 @@ fetch("./data.json")
             }
 
             function test(checkedCheckboxValuesArr) {
-                let results = []
+                let results = [];
                 index.forEach(element => {
                     let grammercategoryValues = Object.values(element.grammercategory)
 
@@ -76,8 +76,8 @@ fetch("./data.json")
                             results.push(element.sentence)
 
                         }
-
-                        break
+                        return showResults(results)
+                        
 
                     }
 
@@ -88,7 +88,9 @@ fetch("./data.json")
 
             }
 
+function showResults (results){
 
+}
 
 
         }
