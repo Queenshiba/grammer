@@ -77,7 +77,7 @@ fetch("./data.json")
 
                         }
                         return showResults(results)
-                        
+
 
                     }
 
@@ -88,9 +88,9 @@ fetch("./data.json")
 
             }
 
-function showResults (results){
+            function showResults(results) {
 
-}
+            }
 
 
         }
@@ -104,56 +104,100 @@ let searchInput = document.getElementById("search-input")
 let searchInputBtn = document.getElementById("search-input-btn")
 let filteringCheckboxBtn = document.getElementById("filteringCheckboxBtn")
 
+// Add checkbox contents detail below
+const typesofsentences = ["SV", "SVC", "SVO", "SVOO", "SVOC"]
+const typesoftenses = ["Present simple", "Present tense", "Present continuous", "Present perfect continuous", "Past simple", "Past tense", "Past continuous", "Present perfect", "Past perfect", "Past perfect continuous", "Future simple", "Future simple", "Future continuous", "Future perfect", "Future perfect continuous"]
+const typesofcomparative = ["原級比較", "比較級", "最上級"]
+
+// Add checkbox contents below
+const checkboxContents = [typesofsentences, typesoftenses, typesofcomparative]
+const checkboxContentsLabel = ['typesofsentences', 'typesoftenses', 'typesofcomparative']
+
+creatingCheckboxAndLabel(checkboxContents)
+
+function creatingCheckboxAndLabel(checkboxContents) {
+    let checkboxLabelWrap = document.getElementById('checkboxLabelWrap')
+
+    let createCheckboxWrap = document.createElement('div')
+    createCheckboxWrap.setAttribute("id", checkboxContentsLabel)
+
+    for (let i = 0; i < checkboxContents.length; i++) {
+        let createh2 = document.createElement('h2')
+        let h2Textnode = document.createTextNode(checkboxContentsLabel[i])
+        createh2.appendChild(h2Textnode)
+        createCheckboxWrap.appendChild(createh2)
+
+        checkboxLabelWrap.appendChild(createCheckboxWrap)
+
+        checkboxContents[i].forEach(content => {
+            let createCheckbox = document.createElement('input')
+            createCheckbox.setAttribute("type", "checkbox")
+            createCheckbox.setAttribute("class", "checkbox")
+            createCheckbox.setAttribute("value", content)
+            let createCheckboxLebel = document.createElement('label')
+            let textnode = document.createTextNode(content)
+
+            createCheckboxLebel.appendChild(textnode)
+            createCheckboxWrap.appendChild(createCheckbox)
+            createCheckboxWrap.appendChild(createCheckboxLebel)
+
+
+        })
+
+    }
+
+}
+
 
 
 
 // createCheckboxLebel
-const typesofsentences = ["SV", "SVC", "SVO", "SVOO", "SVOC"]
-let checkboxWrapType = document.getElementById('group-type')
-typesofsentences.forEach(element => {
-    let createCheckbox = document.createElement('input')
-    createCheckbox.setAttribute("type", "checkbox")
-    createCheckbox.setAttribute("class", "checkbox")
-    createCheckbox.setAttribute("value", element)
-    let createCheckboxLebel = document.createElement('label')
-    let typesofsentencesTextnode = document.createTextNode(element)
-    createCheckboxLebel.appendChild(typesofsentencesTextnode)
-    checkboxWrapType.appendChild(createCheckbox)
-    checkboxWrapType.appendChild(createCheckboxLebel)
-})
+// const typesofsentences = ["SV", "SVC", "SVO", "SVOO", "SVOC"]
+// let checkboxWrapType = document.getElementById('group-type')
+// typesofsentences.forEach(element => {
+//     let createCheckbox = document.createElement('input')
+//     createCheckbox.setAttribute("type", "checkbox")
+//     createCheckbox.setAttribute("class", "checkbox")
+//     createCheckbox.setAttribute("value", element)
+//     let createCheckboxLebel = document.createElement('label')
+//     let typesofsentencesTextnode = document.createTextNode(element)
+//     createCheckboxLebel.appendChild(typesofsentencesTextnode)
+//     checkboxWrapType.appendChild(createCheckbox)
+//     checkboxWrapType.appendChild(createCheckboxLebel)
+// })
 
-const typesoftenses = ["Present simple", "Present tense", "Present continuous", "Present perfect continuous", "Past simple", "Past tense", "Past continuous", "Present perfect", "Past perfect", "Past perfect continuous", "Future simple", "Future simple", "Future continuous", "Future perfect", "Future perfect continuous"]
-const typesoftensesJp = { "現在時制": ["現在形", "現在進行形", "現在完了進行形"], "過去時制": ["過去形", "過去進行形", "現在完了形", "過去完了", "過去完了進行形"], "未来時制": ["未来形", "未来進行形", "未来完了形", "未来完了進行形"] }
+// const typesoftenses = ["Present simple", "Present tense", "Present continuous", "Present perfect continuous", "Past simple", "Past tense", "Past continuous", "Present perfect", "Past perfect", "Past perfect continuous", "Future simple", "Future simple", "Future continuous", "Future perfect", "Future perfect continuous"]
+// const typesoftensesJp = { "現在時制": ["現在形", "現在進行形", "現在完了進行形"], "過去時制": ["過去形", "過去進行形", "現在完了形", "過去完了", "過去完了進行形"], "未来時制": ["未来形", "未来進行形", "未来完了形", "未来完了進行形"] }
 
-let checkboxWrapTense = document.getElementById('group-tense')
-typesoftenses.forEach(element => {
-    let createCheckbox = document.createElement('input')
-    createCheckbox.setAttribute("type", "checkbox")
-    createCheckbox.setAttribute("class", "checkbox")
-    createCheckbox.setAttribute("value", element)
-    let createCheckboxLebel = document.createElement('label')
-    let typesofsentencesTextnode = document.createTextNode(element)
-    createCheckboxLebel.appendChild(typesofsentencesTextnode)
-    checkboxWrapTense.appendChild(createCheckbox)
-    checkboxWrapTense.appendChild(createCheckboxLebel)
-})
+// let checkboxWrapTense = document.getElementById('group-tense')
+// typesoftenses.forEach(element => {
+//     let createCheckbox = document.createElement('input')
+//     createCheckbox.setAttribute("type", "checkbox")
+//     createCheckbox.setAttribute("class", "checkbox")
+//     createCheckbox.setAttribute("value", element)
+//     let createCheckboxLebel = document.createElement('label')
+//     let typesofsentencesTextnode = document.createTextNode(element)
+//     createCheckboxLebel.appendChild(typesofsentencesTextnode)
+//     checkboxWrapTense.appendChild(createCheckbox)
+//     checkboxWrapTense.appendChild(createCheckboxLebel)
+// })
 
 
-const typesofcomparative = ["原級比較", "比較級", "最上級"]
-const comparativeJp = ["原級比較", "比較級", "最上級"]
+// const typesofcomparative = ["原級比較", "比較級", "最上級"]
+// const comparativeJp = ["原級比較", "比較級", "最上級"]
 
-let checkboxWrapComparative = document.getElementById('group-comparative')
-typesofcomparative.forEach(element => {
-    let createCheckboxForComparative = document.createElement('input')
-    createCheckboxForComparative.setAttribute("type", "checkbox")
-    createCheckboxForComparative.setAttribute("class", "checkbox")
-    createCheckboxForComparative.setAttribute("value", element)
-    let createCheckboxLebelForComparative = document.createElement('label')
-    let typesofinfinitiveTextnode = document.createTextNode(element)
-    createCheckboxLebelForComparative.appendChild(typesofinfinitiveTextnode)
-    checkboxWrapComparative.appendChild(createCheckboxForComparative)
-    checkboxWrapComparative.appendChild(createCheckboxLebelForComparative)
-})
+// let checkboxWrapComparative = document.getElementById('group-comparative')
+// typesofcomparative.forEach(element => {
+//     let createCheckboxForComparative = document.createElement('input')
+//     createCheckboxForComparative.setAttribute("type", "checkbox")
+//     createCheckboxForComparative.setAttribute("class", "checkbox")
+//     createCheckboxForComparative.setAttribute("value", element)
+//     let createCheckboxLebelForComparative = document.createElement('label')
+//     let typesofinfinitiveTextnode = document.createTextNode(element)
+//     createCheckboxLebelForComparative.appendChild(typesofinfinitiveTextnode)
+//     checkboxWrapComparative.appendChild(createCheckboxForComparative)
+//     checkboxWrapComparative.appendChild(createCheckboxLebelForComparative)
+// })
 
 
 const typesofinfinitive = ["noun", "adjective", "adverb"]
