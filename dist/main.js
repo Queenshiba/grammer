@@ -113,15 +113,20 @@ const typesofcomparative = ["原級比較", "比較級", "最上級"]
 const checkboxContents = [typesofsentences, typesoftenses, typesofcomparative]
 const checkboxContentsLabel = ['typesofsentences', 'typesoftenses', 'typesofcomparative']
 
+
+// function to create checkboxes and labels
 creatingCheckboxAndLabel(checkboxContents)
 
 function creatingCheckboxAndLabel(checkboxContents) {
     let checkboxLabelWrap = document.getElementById('checkboxLabelWrap')
 
-    let createCheckboxWrap = document.createElement('div')
-    createCheckboxWrap.setAttribute("id", checkboxContentsLabel)
+
 
     for (let i = 0; i < checkboxContents.length; i++) {
+
+        let createCheckboxWrap = document.createElement('div')
+        createCheckboxWrap.setAttribute("id", checkboxContentsLabel[i])
+
         let createh2 = document.createElement('h2')
         let h2Textnode = document.createTextNode(checkboxContentsLabel[i])
         createh2.appendChild(h2Textnode)
