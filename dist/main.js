@@ -7,7 +7,7 @@ fetch("./data.json")
     .then(function (data) {
         const index = data.index;
 
-        const result = document.getElementById('result')
+        const resultWrap = document.getElementById('resultWrap')
 
 
 
@@ -22,14 +22,14 @@ fetch("./data.json")
         });
 
 
-        index.forEach(element => {
-            let createPtag = document.createElement('p')
-            let samplesentence = element.sentence
-            let textnode = document.createTextNode(samplesentence)
-            // console.log(samplesentence)
-            createPtag.appendChild(textnode)
-            result.appendChild(createPtag)
-        });
+        // index.forEach(element => {
+        //     let createPtag = document.createElement('p')
+        //     let samplesentence = element.sentence
+        //     let textnode = document.createTextNode(samplesentence)
+        //     // console.log(samplesentence)
+        //     createPtag.appendChild(textnode)
+        //     result.appendChild(createPtag)
+        // });
 
 
         console.log(index)
@@ -89,6 +89,15 @@ fetch("./data.json")
             }
 
             function showResults(results) {
+
+                results.forEach(result => {
+                    let createPForResults = document.createElement('p')
+                    let textnodeResult = document.createTextNode(result)
+                    // console.log(samplesentence)
+                    createPForResults.appendChild(textnodeResult)
+                    console.log(textnodeResult)
+                    resultWrap.appendChild(createPForResults)
+                })
 
             }
 
