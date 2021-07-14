@@ -89,15 +89,23 @@ fetch("./data.json")
             }
 
             function showResults(results) {
+                // console.log(Object.values(results))
+                let arrResults = Object.values(results)
+                console.log(arrResults.length)
+                for (let i = 0; i < arrResults.length; i++) {
 
-                results.forEach(result => {
                     let createPForResults = document.createElement('p')
-                    let textnodeResult = document.createTextNode(result)
+                    let textnodeResult = document.createTextNode(arrResults[i])
                     // console.log(samplesentence)
                     createPForResults.appendChild(textnodeResult)
                     console.log(textnodeResult)
                     resultWrap.appendChild(createPForResults)
-                })
+
+                    break
+                    
+                }
+
+
 
             }
 
