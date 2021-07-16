@@ -80,37 +80,35 @@ fetch("./data.json")
 
 
                     }
-
+console.log(results)
                 })
-                console.log(results)
+                
                 // console.log(grammercategoryValues)
 
 
             }
 
-            
+
             function showResults(results) {
                 // console.log(Object.values(results))
-                let arrResults = Object.values(results)
-                console.log(arrResults.length)
+                // let arrResults = Object.values(results)
+                // console.log(arrResults.length)
                 // for (let i = 0; i < arrResults.length; i++) {
-
+                for (let i = 0; i < results.length; i++) {
                     let createPForResults = document.createElement('p')
-                    let textnodeResult = document.createTextNode(arrResults)
-                    // console.log(samplesentence)
+                    let textnodeResult = document.createTextNode(results[i])
+                    // console.log(results.length)
                     createPForResults.appendChild(textnodeResult)
-                    console.log(textnodeResult)
+                    // console.log(textnodeResult)
                     resultWrap.appendChild(createPForResults)
 
-                //     break
-                    
-                // }
+                }
 
 
 
             }
 
-            
+
         }
 
 
