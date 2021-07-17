@@ -74,15 +74,12 @@ fetch("./data.json")
                     for (let k = 0; k < checkedCheckboxValuesArr.length; k++) {
                         if (grammercategoryValues.includes(checkedCheckboxValuesArr[k])) {
                             results.push(element.sentence)
-
                         }
                         return showResults(results)
-
-
                     }
-console.log(results)
+                    console.log(results)
                 })
-                
+
                 // console.log(grammercategoryValues)
 
 
@@ -101,16 +98,11 @@ console.log(results)
                     createPForResults.appendChild(textnodeResult)
                     // console.log(textnodeResult)
                     resultWrap.appendChild(createPForResults)
-
+                    break
                 }
-
-
-
             }
 
-
         }
-
 
     });
 
