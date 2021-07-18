@@ -94,11 +94,11 @@ fetch("./data.json")
                 for (let i = 0; i < results.length; i++) {
                     let createPForResults = document.createElement('p')
                     let textnodeResult = document.createTextNode(results[i])
-                    // console.log(results.length)
+                    console.log(results.length)
                     createPForResults.appendChild(textnodeResult)
                     // console.log(textnodeResult)
-                    resultWrap.appendChild(createPForResults)
-                    break
+                    return resultWrap.appendChild(createPForResults)
+                    
                 }
             }
 
