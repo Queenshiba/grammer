@@ -75,11 +75,13 @@ fetch("./data.json")
                         if (grammercategoryValues.includes(checkedCheckboxValuesArr[k])) {
                             results.push(element.sentence)
                         }
-                        return showResults(results)
-                    }
-                    console.log(results)
-                })
 
+
+                    }
+
+                })
+                console.log(results)
+                showResults(results)
                 // console.log(grammercategoryValues)
 
 
@@ -89,7 +91,7 @@ fetch("./data.json")
             function showResults(results) {
                 // console.log(Object.values(results))
                 // let arrResults = Object.values(results)
-                // console.log(arrResults.length)
+                // console.log(results)
                 // for (let i = 0; i < arrResults.length; i++) {
                 for (let i = 0; i < results.length; i++) {
                     let createPForResults = document.createElement('p')
@@ -97,8 +99,8 @@ fetch("./data.json")
                     console.log(results.length)
                     createPForResults.appendChild(textnodeResult)
                     // console.log(textnodeResult)
-                    return resultWrap.appendChild(createPForResults)
-                    
+                    resultWrap.appendChild(createPForResults)
+
                 }
             }
 
