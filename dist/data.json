@@ -46,7 +46,7 @@
             "grammercategory": {
                 "pattern": "SVO",
                 "type": "affirmative",
-                "tense": "past simple",
+                "tense": "Past simple",
                 "subject": "the third person"
             }
         }

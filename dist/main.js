@@ -22,16 +22,6 @@ fetch("./data.json")
         });
 
 
-        // index.forEach(element => {
-        //     let createPtag = document.createElement('p')
-        //     let samplesentence = element.sentence
-        //     let textnode = document.createTextNode(samplesentence)
-        //     // console.log(samplesentence)
-        //     createPtag.appendChild(textnode)
-        //     result.appendChild(createPtag)
-        // });
-
-
         console.log(index)
 
         searchInputBtn.addEventListener('click', () => filteringSentences())
@@ -76,23 +66,18 @@ fetch("./data.json")
                             results.push(element.sentence)
                         }
 
-
+                        test(results)
                     }
 
                 })
                 console.log(results)
                 showResults(results)
-                // console.log(grammercategoryValues)
-
 
             }
 
 
             function showResults(results) {
-                // console.log(Object.values(results))
-                // let arrResults = Object.values(results)
-                // console.log(results)
-                // for (let i = 0; i < arrResults.length; i++) {
+    
                 for (let i = 0; i < results.length; i++) {
                     let createPForResults = document.createElement('p')
                     let textnodeResult = document.createTextNode(results[i])
@@ -108,7 +93,7 @@ fetch("./data.json")
 
     });
 
-// console.log(test)
+
 
 let searchInput = document.getElementById("search-input")
 let searchInputBtn = document.getElementById("search-input-btn")
