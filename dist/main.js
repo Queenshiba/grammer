@@ -101,12 +101,13 @@ let filteringCheckboxBtn = document.getElementById("filteringCheckboxBtn")
 
 // Add checkbox contents detail below
 const typesofsentences = ["SV", "SVC", "SVO", "SVOO", "SVOC"]
-const typesoftenses = ["Present simple", "Present tense", "Present continuous", "Present perfect continuous", "Past simple", "Past tense", "Past continuous", "Present perfect", "Past perfect", "Past perfect continuous", "Future simple", "Future simple", "Future continuous", "Future perfect", "Future perfect continuous"]
+const typesoftenses = ["現在時制", "現在形", "Present continuous", "Present perfect continuous", "過去形", "Past tense", "Past continuous", "Present perfect", "Past perfect", "Past perfect continuous", "Future simple", "Future simple", "Future continuous", "Future perfect", "Future perfect continuous"]
 const typesofcomparative = ["原級比較", "比較級", "最上級"]
+const typesofcfiniteVerbs = ["不定詞", "動名詞"]
 
 // Add checkbox contents below
-const checkboxContents = [typesofsentences, typesoftenses, typesofcomparative]
-const checkboxContentsLabel = ['typesofsentences', 'typesoftenses', 'typesofcomparative']
+const checkboxContents = [typesofsentences, typesoftenses, typesofcomparative,typesofcfiniteVerbs]
+const checkboxContentsLabel = ['typesofsentences', 'typesoftenses', 'typesofcomparative',"typesofcfiniteVerbs"]
 
 
 // function to create checkboxes and labels
