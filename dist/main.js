@@ -1,10 +1,10 @@
 "use strict";
 
 fetch("./data.json")
-    .then(function (resp) {
+    .then(function(resp) {
         return resp.json();
     })
-    .then(function (data) {
+    .then(function(data) {
         const index = data.index;
 
         const resultWrap = document.getElementById('resultWrap')
@@ -16,15 +16,16 @@ fetch("./data.json")
             let createPtag = document.createElement('p')
             let grammercategory = element.grammercategory
             let grammercategoryTextnode = document.createTextNode(grammercategory)
-            // console.log(grammercategory)
-            // createPtag.appendChild(grammercategoryTextnode)
-            // result.appendChild(createPtag)
+                // console.log(grammercategory)
+                // createPtag.appendChild(grammercategoryTextnode)
+                // result.appendChild(createPtag)
         });
 
 
         console.log(index)
 
         searchInputBtn.addEventListener('click', () => filteringSentences())
+
         function filteringSentences() {
             // console.log(searchInput.value)
             index.forEach(element => {
@@ -44,15 +45,16 @@ fetch("./data.json")
 
         //get lebels of checked checkbox value
         filteringCheckboxBtn.addEventListener('click', () => getCheckboxLabels())
+
         function getCheckboxLabels() {
             let checkedcheckboxes = document.querySelectorAll('input[type=checkbox]:checked')
 
             let checkedCheckboxValuesArr = []
             for (let i = 0; i < checkedcheckboxes.length; i++) {
                 let checkedCheckboxValue = checkedcheckboxes[i].value
-                // console.log(checkedCheckboxValue.length)
+                    // console.log(checkedCheckboxValue.length)
                 checkedCheckboxValuesArr.push(checkedCheckboxValue)
-                // console.log(checkedCheckboxValuesArr)
+                    // console.log(checkedCheckboxValuesArr)
                 test(checkedCheckboxValuesArr)
             }
 
@@ -77,16 +79,26 @@ fetch("./data.json")
 
 
             function showResults(results) {
-    
-                for (let i = 0; i < results.length; i++) {
-                    let createPForResults = document.createElement('p')
-                    let textnodeResult = document.createTextNode(results[i])
-                    console.log(results.length)
-                    createPForResults.appendChild(textnodeResult)
-                    // console.log(textnodeResult)
-                    resultWrap.appendChild(createPForResults)
+                console.log(results.length)
+                if (results.length === 0) {
 
+                    resultWrap.appendChild(createPForResults)
+                    let createPForNotfound = document.createElement('p')
+                    let textnodeNotfound = document.createTextNode("Not found")
+                    createPForNotfound.appendChild(textnodeNotfound)
+                    resultWrap.appendChild(createPForNotfound)
+
+                } else {
+                    for (let i = 0; i < results.length; i++) {
+                        let createPForResults = document.createElement('p')
+                        let textnodeResult = document.createTextNode(results[i])
+                        console.log(results.length)
+                        createPForResults.appendChild(textnodeResult)
+
+                        resultWrap.appendChild(createPForResults)
+                    }
                 }
+
             }
 
         }
@@ -103,11 +115,11 @@ let filteringCheckboxBtn = document.getElementById("filteringCheckboxBtn")
 const typesofsentences = ["SV", "SVC", "SVO", "SVOO", "SVOC"]
 const typesoftenses = ["現在時制", "現在形", "Present continuous", "Present perfect continuous", "過去形", "Past tense", "Past continuous", "Present perfect", "Past perfect", "Past perfect continuous", "Future simple", "Future simple", "Future continuous", "Future perfect", "Future perfect continuous"]
 const typesofcomparative = ["原級比較", "比較級", "最上級"]
-const typesofcfiniteVerbs = ["不定詞", "動名詞"]
+const typesofgrammer = ["不定詞", "動名詞", "関係代名詞", "比較", "分詞", "助動詞"]
 
 // Add checkbox contents below
-const checkboxContents = [typesofsentences, typesoftenses, typesofcomparative,typesofcfiniteVerbs]
-const checkboxContentsLabel = ['typesofsentences', 'typesoftenses', 'typesofcomparative',"typesofcfiniteVerbs"]
+const checkboxContents = [typesofsentences, typesoftenses, typesofcomparative, typesofgrammer]
+const checkboxContentsLabel = ['typesofsentences', 'typesoftenses', 'typesofcomparative', "typesofgrammer"]
 
 
 // function to create checkboxes and labels
@@ -203,6 +215,6 @@ function creatingCheckboxAndLabel(checkboxContents) {
 
 const typesofinfinitive = ["noun", "adjective", "adverb"]
 const gerund = ["none"]
-// an affirmative sentence
-// a negative sentence
-// an interrogative sentence
+    // an affirmative sentence
+    // a negative sentence
+    // an interrogative sentence
