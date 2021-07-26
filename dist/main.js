@@ -79,25 +79,21 @@ fetch("./data.json")
 
 
             function showResults(results) {
-                console.log(results.length)
-                if (results.length === 0) {
-
-                    resultWrap.appendChild(createPForResults)
-                    let createPForNotfound = document.createElement('p')
-                    let textnodeNotfound = document.createTextNode("Not found")
-                    createPForNotfound.appendChild(textnodeNotfound)
-                    resultWrap.appendChild(createPForNotfound)
-
-                } else {
+                // console.log(results.length)
+                // if (results.length === 0) {
+                //     let createPForNotfound = document.createElement('p')
+                //     let textnodeNotfound = document.createTextNode("Not found")
+                //     createPForNotfound.appendChild(textnodeNotfound)
+                //     resultWrap.appendChild(createPForNotfound)
+                // } else {
                     for (let i = 0; i < results.length; i++) {
                         let createPForResults = document.createElement('p')
                         let textnodeResult = document.createTextNode(results[i])
                         console.log(results.length)
                         createPForResults.appendChild(textnodeResult)
-
                         resultWrap.appendChild(createPForResults)
                     }
-                }
+                // }
 
             }
 
@@ -119,7 +115,7 @@ const typesofgrammer = ["不定詞", "動名詞", "関係代名詞", "比較", "
 
 // Add checkbox contents below
 const checkboxContents = [typesofsentences, typesoftenses, typesofcomparative, typesofgrammer]
-const checkboxContentsLabel = ['typesofsentences', 'typesoftenses', 'typesofcomparative', "typesofgrammer"]
+const checkboxContentsLabel = ['文型', '時制', '比較', "文法"]
 
 
 // function to create checkboxes and labels
