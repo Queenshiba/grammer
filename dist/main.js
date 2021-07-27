@@ -111,7 +111,7 @@ let filteringCheckboxBtn = document.getElementById("filteringCheckboxBtn")
 const typesofsentences = ["SV", "SVC", "SVO", "SVOO", "SVOC"]
 const typesoftenses = ["現在時制", "現在形", "Present continuous", "Present perfect continuous", "過去形", "Past tense", "Past continuous", "Present perfect", "Past perfect", "Past perfect continuous", "Future simple", "Future simple", "Future continuous", "Future perfect", "Future perfect continuous"]
 const typesofcomparative = ["原級比較", "比較級", "最上級"]
-const typesofgrammer = ["不定詞", "動名詞", "関係代名詞", "比較", "分詞", "助動詞"]
+const typesofgrammer = ["不定詞", "動名詞", "関係代名詞", "比較", "分詞","強調構文", "助動詞"]
 
 // Add checkbox contents below
 const checkboxContents = [typesofsentences, typesoftenses, typesofcomparative, typesofgrammer]

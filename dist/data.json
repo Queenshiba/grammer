@@ -24,6 +24,7 @@
             "sentence": "She is studying English for 3 months so that she can speak it when she travels foreign countries. ",
             "translation-jpn": "彼女は電車に大事な書類を忘れたことを秘密にした。",
             "grammercategory": {
+                "grammer":"",
                 "pattern": "SVO",
                 "type": "affirmative",
                 "tense": "present continuous",
@@ -34,6 +35,7 @@
             "sentence": "It was found out that my mother had a cancer. ",
             "translation-jpn": "彼女は電車に大事な書類を忘れたことを秘密にした。",
             "grammercategory": {
+                "grammer":"強調構文",
                 "pattern": "SVO",
                 "type": "affirmative",
                 "tense": "past simple",
@@ -44,6 +46,7 @@
             "sentence": "It was yesterday that they found her. ",
             "translation-jpn": "彼女は電車に大事な書類を忘れたことを秘密にした。",
             "grammercategory": {
+                "grammer":"強調構文",
                 "pattern": "SVO",
                 "type": "affirmative",
                 "tense": "過去形",
