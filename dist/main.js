@@ -157,56 +157,16 @@ function creatingCheckboxAndLabel(checkboxContents) {
 
 }
 
+let clearCheckboxBtn = document.getElementById("clearCheckbox")
+clearCheckboxBtn.addEventListener('click', () => clearCheckbox())
+function clearCheckbox(){
+let checkboxes = document.getElementsByClassName('checkbox')
+// return checkboxes.checked = false;
+console.log(checkboxes.checked)
+}
 
 
 
-// createCheckboxLebel
-// const typesofsentences = ["SV", "SVC", "SVO", "SVOO", "SVOC"]
-// let checkboxWrapType = document.getElementById('group-type')
-// typesofsentences.forEach(element => {
-//     let createCheckbox = document.createElement('input')
-//     createCheckbox.setAttribute("type", "checkbox")
-//     createCheckbox.setAttribute("class", "checkbox")
-//     createCheckbox.setAttribute("value", element)
-//     let createCheckboxLebel = document.createElement('label')
-//     let typesofsentencesTextnode = document.createTextNode(element)
-//     createCheckboxLebel.appendChild(typesofsentencesTextnode)
-//     checkboxWrapType.appendChild(createCheckbox)
-//     checkboxWrapType.appendChild(createCheckboxLebel)
-// })
-
-// const typesoftenses = ["Present simple", "Present tense", "Present continuous", "Present perfect continuous", "Past simple", "Past tense", "Past continuous", "Present perfect", "Past perfect", "Past perfect continuous", "Future simple", "Future simple", "Future continuous", "Future perfect", "Future perfect continuous"]
-// const typesoftensesJp = { "現在時制": ["現在形", "現在進行形", "現在完了進行形"], "過去時制": ["過去形", "過去進行形", "現在完了形", "過去完了", "過去完了進行形"], "未来時制": ["未来形", "未来進行形", "未来完了形", "未来完了進行形"] }
-
-// let checkboxWrapTense = document.getElementById('group-tense')
-// typesoftenses.forEach(element => {
-//     let createCheckbox = document.createElement('input')
-//     createCheckbox.setAttribute("type", "checkbox")
-//     createCheckbox.setAttribute("class", "checkbox")
-//     createCheckbox.setAttribute("value", element)
-//     let createCheckboxLebel = document.createElement('label')
-//     let typesofsentencesTextnode = document.createTextNode(element)
-//     createCheckboxLebel.appendChild(typesofsentencesTextnode)
-//     checkboxWrapTense.appendChild(createCheckbox)
-//     checkboxWrapTense.appendChild(createCheckboxLebel)
-// })
-
-
-// const typesofcomparative = ["原級比較", "比較級", "最上級"]
-// const comparativeJp = ["原級比較", "比較級", "最上級"]
-
-// let checkboxWrapComparative = document.getElementById('group-comparative')
-// typesofcomparative.forEach(element => {
-//     let createCheckboxForComparative = document.createElement('input')
-//     createCheckboxForComparative.setAttribute("type", "checkbox")
-//     createCheckboxForComparative.setAttribute("class", "checkbox")
-//     createCheckboxForComparative.setAttribute("value", element)
-//     let createCheckboxLebelForComparative = document.createElement('label')
-//     let typesofinfinitiveTextnode = document.createTextNode(element)
-//     createCheckboxLebelForComparative.appendChild(typesofinfinitiveTextnode)
-//     checkboxWrapComparative.appendChild(createCheckboxForComparative)
-//     checkboxWrapComparative.appendChild(createCheckboxLebelForComparative)
-// })
 
 
 const typesofinfinitive = ["noun", "adjective", "adverb"]
