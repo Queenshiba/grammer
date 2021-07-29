@@ -1,10 +1,10 @@
 "use strict";
 
 fetch("./data.json")
-    .then(function(resp) {
+    .then(function (resp) {
         return resp.json();
     })
-    .then(function(data) {
+    .then(function (data) {
         const index = data.index;
 
         const resultWrap = document.getElementById('resultWrap')
@@ -16,9 +16,9 @@ fetch("./data.json")
             let createPtag = document.createElement('p')
             let grammercategory = element.grammercategory
             let grammercategoryTextnode = document.createTextNode(grammercategory)
-                // console.log(grammercategory)
-                // createPtag.appendChild(grammercategoryTextnode)
-                // result.appendChild(createPtag)
+            // console.log(grammercategory)
+            // createPtag.appendChild(grammercategoryTextnode)
+            // result.appendChild(createPtag)
         });
 
 
@@ -52,9 +52,9 @@ fetch("./data.json")
             let checkedCheckboxValuesArr = []
             for (let i = 0; i < checkedcheckboxes.length; i++) {
                 let checkedCheckboxValue = checkedcheckboxes[i].value
-                    // console.log(checkedCheckboxValue.length)
+                // console.log(checkedCheckboxValue.length)
                 checkedCheckboxValuesArr.push(checkedCheckboxValue)
-                    // console.log(checkedCheckboxValuesArr)
+                // console.log(checkedCheckboxValuesArr)
                 test(checkedCheckboxValuesArr)
             }
 
@@ -86,13 +86,13 @@ fetch("./data.json")
                 //     createPForNotfound.appendChild(textnodeNotfound)
                 //     resultWrap.appendChild(createPForNotfound)
                 // } else {
-                    for (let i = 0; i < results.length; i++) {
-                        let createPForResults = document.createElement('p')
-                        let textnodeResult = document.createTextNode(results[i])
-                        console.log(results.length)
-                        createPForResults.appendChild(textnodeResult)
-                        resultWrap.appendChild(createPForResults)
-                    }
+                for (let i = 0; i < results.length; i++) {
+                    let createPForResults = document.createElement('p')
+                    let textnodeResult = document.createTextNode(results[i])
+                    console.log(results.length)
+                    createPForResults.appendChild(textnodeResult)
+                    resultWrap.appendChild(createPForResults)
+                }
                 // }
 
             }
@@ -111,7 +111,7 @@ let filteringCheckboxBtn = document.getElementById("filteringCheckboxBtn")
 const typesofsentences = ["SV", "SVC", "SVO", "SVOO", "SVOC"]
 const typesoftenses = ["現在時制", "現在形", "Present continuous", "Present perfect continuous", "過去形", "Past tense", "Past continuous", "Present perfect", "Past perfect", "Past perfect continuous", "Future simple", "Future simple", "Future continuous", "Future perfect", "Future perfect continuous"]
 const typesofcomparative = ["原級比較", "比較級", "最上級"]
-const typesofgrammer = ["不定詞", "動名詞", "関係代名詞", "比較", "分詞","強調構文", "助動詞"]
+const typesofgrammer = ["不定詞", "動名詞", "関係代名詞", "比較", "分詞", "強調構文", "助動詞"]
 
 // Add checkbox contents below
 const checkboxContents = [typesofsentences, typesoftenses, typesofcomparative, typesofgrammer]
@@ -159,10 +159,14 @@ function creatingCheckboxAndLabel(checkboxContents) {
 
 let clearCheckboxBtn = document.getElementById("clearCheckbox")
 clearCheckboxBtn.addEventListener('click', () => clearCheckbox())
-function clearCheckbox(){
-let checkboxes = document.getElementsByClassName('checkbox')
-// return checkboxes.checked = false;
-console.log(checkboxes.checked)
+function clearCheckbox() {
+    let checkboxes = document.getElementsByClassName('checkbox')
+    console.log(checkboxes.checked)
+    for (let i in checkboxes)
+        if (checkboxes[i].type == "checkbox") {
+            checkboxes[i].checked = false;
+        }
+
 }
 
 
