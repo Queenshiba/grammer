@@ -88,6 +88,7 @@ fetch("./data.json")
                 // } else {
                 for (let i = 0; i < results.length; i++) {
                     let createPForResults = document.createElement('p')
+                    createPForResults.setAttribute("class", "filteredSetence")
                     let textnodeResult = document.createTextNode(results[i])
                     console.log(results.length)
                     createPForResults.appendChild(textnodeResult)
@@ -99,9 +100,10 @@ fetch("./data.json")
 
         }
 
+
     });
 
-
+    const resultWrap = document.getElementById('resultWrap')
 
 let searchInput = document.getElementById("search-input")
 let searchInputBtn = document.getElementById("search-input-btn")
@@ -161,12 +163,11 @@ let clearCheckboxBtn = document.getElementById("clearCheckbox")
 clearCheckboxBtn.addEventListener('click', () => clearCheckbox())
 function clearCheckbox() {
     let checkboxes = document.getElementsByClassName('checkbox')
-    console.log(checkboxes.checked)
     for (let i in checkboxes)
         if (checkboxes[i].type == "checkbox") {
             checkboxes[i].checked = false;
         }
-
+        
 }
 
 
