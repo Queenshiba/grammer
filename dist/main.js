@@ -103,7 +103,7 @@ fetch("./data.json")
 
     });
 
-    const resultWrap = document.getElementById('resultWrap')
+const resultWrap = document.getElementById('resultWrap')
 
 let searchInput = document.getElementById("search-input")
 let searchInputBtn = document.getElementById("search-input-btn")
@@ -167,7 +167,14 @@ function clearCheckbox() {
         if (checkboxes[i].type == "checkbox") {
             checkboxes[i].checked = false;
         }
-        
+        let resultWrap = document.getElementById('resultWrap')
+        let filteredSetence = document.getElementsByClassName("filteredSetence")
+    for (let k = 0; k < filteredSetence.length; k++) {
+        resultWrap.removeChild(filteredSetence[k])
+
+    }
+
+
 }
 
 
