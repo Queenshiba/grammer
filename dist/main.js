@@ -168,12 +168,7 @@ function clearCheckbox() {
             checkboxes[i].checked = false;
         }
         let resultWrap = document.getElementById('resultWrap')
-        let filteredSetence = document.getElementsByClassName("filteredSetence")
-    for (let k = 0; k < filteredSetence.length; k++) {
-        resultWrap.removeChild(filteredSetence[k])
-
-    }
-
+        resultWrap.remove()
 
 }
 
